@@ -14,7 +14,20 @@
     <script>
         //sum 함수를 구현하시오 (제한시간 : 15분)
         const sum = () => {
-            const number = document.querySelector
+            const number = document.querySelector('#num');
+
+            if(number.value.trim().length === 0 ) {
+                alert('합의 범위를 입력하십시오.');
+                return;
+            }
+            
+            let sum = 0;
+            for(let i = 1; i <= number.value ; i++) {
+                   sum += i;
+            }
+
+            const resultSpan = document.querySelector('#result');
+            resultSpan.textContent = sum;
         }
     </script>
 </body>
